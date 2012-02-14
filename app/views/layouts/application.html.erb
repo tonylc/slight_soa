@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slight SOA</title>
+    <%= stylesheet_link_tag [@css || []].flatten.uniq %>
+    <%= yield :head %>
+  </head>
+  <body>
+    <div class="header"></div>
+    <%= yield %>
+    <div id="footer" ></div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <%= javascript_include_tag [@js || []].flatten.uniq %>
+    <%= yield :script %>
+  </body>
+</html>
