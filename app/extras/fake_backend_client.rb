@@ -25,6 +25,6 @@ class FakeBackendClient
       uri.slice!(0)
     end
     file_path = uri.gsub("/", "_").gsub(/_[\d]+/, "_id")
-    file_path = "#{RAILS_ROOT}/app/views/fake/#{@domain.downcase.gsub("-", "_")}/#{file_path}.json"
+    file_path = "#{RAILS_ROOT}/lib/fixtures/#{@domain.downcase.gsub("-", "_")}/#{file_path}.json"
   end
 end
